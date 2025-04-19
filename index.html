@@ -1,13 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exogenix.ia</title>
-    <link href="styles.css" rel="stylesheet">
-  </head>
-  <body>
-    <div id="root">Carregando painel...</div>
-    <script src="main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exogenix.ia - Painel Alpha</title>
+  <style>
+    body { font-family: sans-serif; background: #0d1117; color: #fff; text-align: center; padding: 50px; }
+    .container { background: #161b22; padding: 30px; border-radius: 12px; box-shadow: 0 0 10px #00ff99; max-width: 400px; margin: auto; }
+    h1 { color: #00ff99; }
+    button { background: #00ff99; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; color: #000; font-weight: bold; margin-top: 20px; }
+    #status { margin-top: 20px; font-size: 1.2em; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Exogenix.ia</h1>
+    <p>🔒 Painel Alpha Ativo</p>
+    <div id="status">Status da IA: <strong>Conectando...</strong></div>
+    <button onclick="simularStatus()">🔁 Testar Conexão</button>
+  </div>
+
+  <script>
+    function simularStatus() {
+      document.getElementById("status").innerHTML = "Status da IA: <strong style='color:lime'>ONLINE</strong>";
+      console.log("Conexão simulada com IA ativa.");
+    }
+
+    // Simular ping automático
+    setTimeout(simularStatus, 1500);
+  </script>
+</body>
 </html>
